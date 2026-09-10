@@ -1,22 +1,24 @@
 {
   "schemaVersion": 1,
   "id": "io.github.peterholko.screen-time",
-  "name": "Screen Time",
-  "version": "1.0.0",
+  "name": "School & Screen Time",
+  "version": "0.2.0",
   "author": "Peter Holko",
-  "description": "Daily budgets, bedtime, parent controls, and optional arithmetic rewards.",
+  "description": "One control panel for school schedules, apps, free-time budgets, bedtime and math rewards.",
   "kinds": [
     "service",
-    "bar-widget"
+    "bar-widget",
+    "menu"
   ],
   "keepLoaded": true,
   "entryPoints": {
     "service": "Service.qml",
-    "barWidget": "BarWidget.qml"
+    "barWidget": "BarWidget.qml",
+    "menu": "Entry.qml"
   },
   "barWidget": {
-    "displayName": "Screen time",
-    "description": "The screen time left today.",
+    "displayName": "School & Screen Time",
+    "description": "School mode and the free-time budget, with one parent control panel.",
     "category": "System",
     "allowMultiple": false,
     "defaultSection": "right"
