@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/peterholko/omarchy-kids",
-  "commit": "e303417420df5d977022f7e93d3800a613c75c6b",
+  "commit": "5ec6364f3b7ab11fcb8208b8058e366c3a55271b",
   "path": "shell/plugins/screen-time",
   "exporter": "packaging/community/export.py"
 }

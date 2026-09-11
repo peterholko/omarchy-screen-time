@@ -40,7 +40,7 @@ python3 -I "$HOME/.config/omarchy/plugins/io.github.peterholko.screen-time/schoo
 
 Click the School & Screen Time widget to open the one control panel. Today shows the budget, activity and time grants; Time + Math sets budgets, bedtime and recall level; School + Apps sets school hours and app permissions. Free Time and changes to the schedule or allowed apps require the controls parent password; the password field displays checking feedback. School Mode never automatically opens Math Time after login or unlock, and stops an earning session already in progress. Deliberately opened practice remains optional. Bedtime still applies.
 
-The settings include optional access to Number Grove, Paw Post Typing and Pawberry Pet Hotel when their desktop launchers are installed. Other desktop IDs can be configured with the client’s `config patch` command.
+The settings include optional access to Number Grove, Paw Post Typing and Pawberry Pet Hotel when their desktop launchers are installed. Service 2.1.0 also supports independent Pawberry daily addition/subtraction limits: `sudo omarchy-kids-controls-pawberry-client limits --user CHILD_USERNAME --addition 5 --subtraction 5`. Use `0` to disable an operation or `unlimited` to remove the cap; completed problems count once per local day, across game restarts. Other desktop IDs can be configured with the client’s `config patch` command.
 
 There is one browser profile. This plugin does not filter websites; use a separate DNS/browser policy if needed. The filtered launcher and standard shortcut changes do not prevent custom shortcuts, terminal commands or manually started applications.
 
@@ -67,7 +67,7 @@ sudo omarchy-kids-controls enable controls --user CHILD_USERNAME
 The shared service uses Python 3's standard library, systemd/logind and Omarchy's shell/lock/notification commands. School desktop effects also use Bash 5, Hyprland's Lua IPC, jq and flock, supplied by Omarchy. No pip packages, network services or API keys are needed.
 
 - Code: `/usr/lib/omarchy-kids-controls/`
-- Commands: `/usr/bin/omarchy-kids-controls` and `omarchy-kids-controls-{time,school,grove}-client`
+- Commands: `/usr/bin/omarchy-kids-controls` and `omarchy-kids-controls-{time,school,grove,pawberry}-client`
 - Unit: `/etc/systemd/system/omarchy-kids-controls.service`
 - Private configuration and password: `/etc/omarchy-kids-controls/`
 - Private service state and per-user read-only status: `/var/lib/omarchy-kids-controls/`
